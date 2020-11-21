@@ -17,7 +17,7 @@ myMap.forEach(function(url,key){
       window.scrollBy(0, 0);
     });
     await page.waitFor(1000)
-    await percySnapshot(key);
+    await percySnapshot(key, { widths: [1366,768,360]});
   });
   
 });
