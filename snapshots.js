@@ -6,9 +6,10 @@ myMap.set("Sklep", MAIN_URL + "sklep");
 myMap.set("Promocje", MAIN_URL + "promocje");
 myMap.set("Produkt", MAIN_URL + "sklep/lakiery-hybrydowe/produkt/protein-base-gold-edition-7ml/category_pathway-92");
 // A script to navigate our app and take snapshots with Percy.
-PercyScript.run(async (page, percySnapshot) => {
-  myMap.forEach(function(value,key,map){
-    await page.goto(value);
+myMap.forEach(function(url,key){
+  PercyScript.run(async (page, percySnapshot) => {
+ 
+    await page.goto(url);
     page.evaluate(_ => {
       window.scrollBy(0, window.innerHeight);
     });
