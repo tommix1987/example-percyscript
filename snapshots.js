@@ -7,9 +7,4 @@ PercyScript.run(async (page, percySnapshot) => {
 
   await page.goto(MAIN_URL);
   await percySnapshot('Homepage');
-
-  // Enter a new to-do.
-  await page.type('.new-todo', 'A really important todo');
-  await page.keyboard.press('Enter');
-  await percySnapshot('TodoMVC with a new todo');
 });
