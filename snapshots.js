@@ -12,7 +12,6 @@ myMap.forEach(function(url,key){
  
     await page.goto(url);
     page.click(COOKIE_BUTTON)
-    ".ba-lightbox .ba-btn-transition")
     page.evaluate(_ => {
       window.scrollBy(0, window.innerHeight);
     });
