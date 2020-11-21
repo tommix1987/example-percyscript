@@ -12,6 +12,6 @@ PercyScript.run(async (page, percySnapshot) => {
   page.evaluate(_ => {
     window.scrollBy(0, 0);
   });
-  await page.waitFor(1000)
+  await page.waitFor(5000)
   await percySnapshot('Homepage');
 });
