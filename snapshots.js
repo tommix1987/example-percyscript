@@ -6,8 +6,12 @@ const MAIN_URL = 'https://www.snstudio.pl';
 PercyScript.run(async (page, percySnapshot) => {
 
   await page.goto(MAIN_URL);
-  window.scrollTo(0,document.body.scrollHeight);
-  window.scrollTo(0,0);
+  page.evaluate(_ => {
+    window.scrollBy(0, window.innerHeight);
+  });
+  page.evaluate(_ => {
+    window.scrollBy(0, 0);
+  });
   await page.waitFor(1000)
   await percySnapshot('Homepage');
 });
