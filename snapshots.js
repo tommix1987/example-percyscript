@@ -1,6 +1,6 @@
 const PercyScript = require('@percy/script');
-const MAIN_URL = 'https://www.snstudio.pl;
-const widths = { widths: [768, 992, 1200] };
+const MAIN_URL = 'https://www.snstudio.pl';
+
 
 // A script to navigate our app and take snapshots with Percy.
 PercyScript.run(async (page, percySnapshot) => {
@@ -11,5 +11,5 @@ PercyScript.run(async (page, percySnapshot) => {
   // Enter a new to-do.
   await page.type('.new-todo', 'A really important todo');
   await page.keyboard.press('Enter');
-  await percySnapshot('TodoMVC with a new todo', widths);
+  await percySnapshot('TodoMVC with a new todo');
 });
